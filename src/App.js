@@ -51,7 +51,8 @@ function App() {
         
         <Milestone year="2020 - Project 1" title="Reinstatement of Heritage Pier"/>
         <LargeRight imgSrc='/assets/pier.png' trans={'-100px'}/>
-        <MedLeft imgSrc='/assets/pier_short.mp4' trans={'-260px'} video={true} />
+        <SmallLeft images={["/assets/drawing.jpg"]} trans='-40%' inset={true}/>
+        <MedLeft imgSrc='/assets/pier_short.mp4' video={true} />
         
         <Milestone year="2020 - Project 2" title="Artist-in-Residence Accomodation"/>
         <LargeLeft imgSrc='/assets/accom.png'/>
