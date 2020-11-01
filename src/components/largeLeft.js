@@ -1,6 +1,6 @@
 const LargeLeft = ({imgSrc, caption, trans}) => {
     return (
-        <div className="grid" data-scroll-section style={{marginTop: trans + 'px'}}>
+        <div className="grid" data-scroll-section style={{marginTop: trans }}>
             <div className="large-left">
                 <img src={imgSrc} data-scroll/>
                 {caption && <p>{caption}</p>}

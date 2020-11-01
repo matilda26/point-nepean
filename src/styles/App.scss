@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   @include page-padding();
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -13,46 +13,50 @@
 
   &__link {
     font-size: $sp-sm;
+    cursor: pointer;
   }
 
   h1 {
     width: 80%;
   }
+}
 
-  .cameron {
-    cursor: pointer;
-  }
+.background {
+  z-index: -100;
 }
 
 .timeline {
-  position: absolute;
-  left: 60px;
-  top: 100vh;
-  height: 100%;
-  width: 2px;
-  background-color: $white;
+  position: relative;
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -4px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    left: 46px;
+    width: 30px;
+    height: 2px;
     background-color: #fff;
   }
 
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: -4px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    top: 0;
+    left: 60px;
+    width: 2px;
+    height: 100%;
     background-color: #fff;
   }
+}
+
+.back {
+  font-size: $sp-sm;
+  cursor: pointer;
+  position: fixed;
+  bottom: $sp-md;
+  right: $sp-xl;
+  font-weight: 600;
+  z-index: 300;
 }
 
 .milestone {
@@ -91,18 +95,17 @@
     @include md {
       grid-column: 1 / span 12;
       font-size: 14rem;
+      width: 80%;
     }
   }
 
   &__sketch {
     position: absolute;
     right: 0;
-    top: $sp-md;
+    top: 0;
     width: 100%;
-
-    @include md {
-      top: $sp-xl;
-    }
+    mix-blend-mode: soft-light;
+    height: 100%;
   }
 }
 
@@ -139,12 +142,26 @@
   }
 }
 
+.small-middle {
+  grid-column: 2 / span 2;
+  width: 100%;
+  z-index: 60;
+  @include md {
+    grid-column: 7 / span 3;
+  }
+}
+
+
 .small-left {
   grid-column: 1 / span 2;
   width: 100%;
   z-index: 60;
   @include md {
     grid-column: 3 / span 3;
+  }
+
+  img {
+    margin-bottom: $sp-sm;
   }
 }
 
@@ -189,7 +206,7 @@
   width: 100%;
   z-index: 20;
   @include md {
-    grid-column: 7 / span 5;
+    grid-column: 6 / span 6;
   }
 }
 
@@ -214,17 +231,68 @@
 .modal {
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: $black;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1000;
-  color: $black;
+  color: $white;
+
+  .grid {
+    height: 100%;
+  }
 
   &__cross {
     cursor: pointer;
+    position: absolute;
+    right: $sp-xl;
+    font-size: 24px;
+    top: $sp-md;
+  }
+
+  &__inner {
+    grid-column: 2 / span 5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  form {
+    grid-column: 7 / span 5;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    height: 100%;
+    justify-content: center;
+  }
+
+  label {
+    margin-bottom: $sp-sm;
+  }
+
+  input, textarea {
+    padding: 1.6rem 0.8rem;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    margin-bottom: 2.4rem;
+  }
+
+  button {
+    width: fit-content;
+    font-size: 1.8rem;
+    padding: 1.6rem 4rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: $white;
   }
 
   &--open {

@@ -1,7 +1,7 @@
-const SmallRight = ({imgSrc, caption, inset, trans}) => {
+const SmallMiddle = ({imgSrc, caption, inset, trans}) => {
     return (
         <div className="grid" data-scroll-section style={{marginTop: trans }}>
-            <div className={`small-right${inset ? '--inset' : ''}`}>
+            <div className={`small-middle${inset ? '--inset' : ''}`}>
                 <img src={imgSrc} data-scroll/>
                 {caption && <p>{caption}</p>}
             </div>
@@ -9,4 +9,4 @@ const SmallRight = ({imgSrc, caption, inset, trans}) => {
     )
 }
 
-export default SmallRight;
+export default SmallMiddle;

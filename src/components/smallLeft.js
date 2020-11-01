@@ -1,8 +1,10 @@
-const SmallLeft = ({imgSrc, caption, inset, trans}) => {
+const SmallLeft = ({imgSrc, caption, inset, trans, images}) => {
     return (
-        <div className="grid" data-scroll-section style={{marginTop: trans + 'px'}}>
+        <div className="grid" data-scroll-section style={{marginTop: trans }}>
             <div className={`small-left${inset ? '--inset' : ''}`}>
-                <img src={imgSrc} data-scroll data-scroll-position="bottom" data-scroll-speed="9"/>
+                {images && images.length && images.map((item) => (
+                    <img src={item} data-scroll data-scroll-speed="-1"/>
+                ))}
                 {caption && <p>{caption}</p>}
             </div>
         </div>
