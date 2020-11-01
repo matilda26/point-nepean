@@ -1,0 +1,124 @@
+// Spacing
+$sp-xs: 0.8rem;
+$sp-sm: 1.6rem;
+$sp-md: 2.4rem;
+$sp-lg: 4rem;
+$sp-xl: 6rem;
+$sp-2xl: 9.6rem;
+$sp-3xl: 12rem;
+
+$mobile-grid-gap: $sp-sm;
+$desktop-grid-gap: $sp-lg;
+
+$screen-xs-min: 425px;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1440px;
+
+$olive: #51593E;
+$black: #000;
+$white: #fff;
+
+@mixin xs {
+    @media (min-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin xs-down {
+    @media (max-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+@mixin xl-down {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+}
+
+@mixin grid() {
+    display: grid;
+    margin: $sp-md;  
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: $sp-sm; 
+
+    @include md {
+        margin: $sp-md $sp-xl;  
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $sp-lg; 
+    }
+}
+
+@mixin page-padding() {
+    margin: $sp-md; 
+    @include md {
+        margin: $sp-md $sp-xl;  
+    }
+}
+
+body {
+    background-color: $olive;
+    color: $white;
+}
+
+.container {
+    @include page-padding();
+}
+
+.grid {
+    @include grid();
+}

@@ -1,0 +1,207 @@
+@import './variables.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include page-padding();
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__link {
+    font-size: $sp-sm;
+  }
+
+  h1 {
+    width: 80%;
+  }
+}
+
+.timeline {
+  position: absolute;
+  left: 60px;
+  top: 100vh;
+  height: 100%;
+  width: 2px;
+  background-color: $white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
+
+.milestone {
+  padding: $sp-lg $sp-sm $sp-lg 8.4rem;
+  max-width: 30rem;
+  position: relative;
+  font-size: 16px;
+  z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 56px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+
+  &__year {
+    font-weight: bold;
+  }
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  h1 {
+    font-size: 8rem;
+    grid-column: 1 / span 5;
+    @include md {
+      grid-column: 1 / span 12;
+      font-size: 14rem;
+    }
+  }
+
+  &__sketch {
+    position: absolute;
+    right: 0;
+    top: $sp-md;
+    width: 100%;
+
+    @include md {
+      top: $sp-xl;
+    }
+  }
+}
+
+.spacer {
+  height: 200vh;
+}
+
+.grid {
+  img, video {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-top: 4px;
+  }
+}
+
+.small-right {
+  grid-column: 3 / span 2;
+  width: 100%;
+  z-index: 60;
+  @include md {
+    grid-column: 10 / span 3;
+  }
+}
+
+.small-right--inset {
+  grid-column: 3 / span 2;
+  width: 100%;
+  z-index: 60;
+  @include md {
+    grid-column: 9 / span 3;
+  }
+}
+
+.small-left {
+  grid-column: 1 / span 2;
+  width: 100%;
+  z-index: 60;
+  @include md {
+    grid-column: 3 / span 3;
+  }
+}
+
+.small-left--inset {
+  grid-column: 1 / span 2;
+  width: 100%;
+  z-index: 60;
+  @include md {
+    grid-column: 4 / span 3;
+  }
+}
+
+.med-left {
+  grid-column: 1 / span 4;
+  width: 100%;
+  z-index: 20;
+  @include md {
+    grid-column: 3 / span 5;
+  }
+}
+
+.med-left--inset {
+  grid-column: 1 / span 4;
+  width: 100%;
+  z-index: 20;
+  @include md {
+    grid-column: 4 / span 5;
+  }
+}
+
+.med-right {
+  grid-column: 2 / span 4;
+  width: 100%;
+  z-index: 20;
+  @include md {
+    grid-column: 8 / span 5;
+  }
+}
+
+.med-right--inset {
+  grid-column: 1 / span 4;
+  width: 100%;
+  z-index: 20;
+  @include md {
+    grid-column: 7 / span 5;
+  }
+}
+
+.large-left {
+  grid-column: 1 / span 5;
+  width: 100%;
+  z-index: 10;
+  @include md {
+    grid-column: 3 / span 8;
+  }
+}
+
+.large-right {
+  grid-column: 1 / span 5;
+  width: 100%;
+  z-index: 10;
+  @include md {
+    grid-column: 5 / span 8;
+  }
+}
