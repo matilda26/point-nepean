@@ -76,22 +76,22 @@ function App() {
         <MedRight imgSrc="/assets/ex-build.gif" trans="-20%"/>
         <TwoCol imgsTwo={["/assets/foot.png"]} imgsOne={['/assets/STAIRS_02.jpg']}/>
 
-        <Milestone year="2027 - Stage 3" title="Coastal Protection Zone"/>
+        <Milestone year="2030 - Stage 3" title="Coastal Protection Zone"/>
         <MedLeft imgSrc='/assets/stage3.png' trans="-100px"/>
         <MedRight imgSrc="/assets/living-shore.jpg" trans="-20%" />
         <MedRight imgSrc="/assets/exist-failed.jpg" />
 
-        <Milestone year="2029 - Stage 4" title="Proposed Bath House"/>
+        <Milestone year="2040 - Stage 4" title="Proposed Bath House"/>
         <TwoCol imgsOne={["/assets/stage4.png"]} imgsTwo={['/assets/foot.png']} trans="-100px"/>
         <TwoCol imgsOne={["/assets/pool-01.jpg"]} imgsTwo={['/assets/pool-02.jpg']} />
 
-        <Milestone year="2031 - Stage 5" title="Indigenous Archeological Sites"/>
+        <Milestone year="2060 - Stage 5" title="Indigenous Archeological Sites"/>
         <MedLeft imgSrc='/assets/stage5.png' trans="-100px"/>
         <LargeRight imgSrc="assets/indig.jpg" trans="-20%"/>
         <SmallLeft images={['/assets/walkway.png']} trans="-20%"/>
         <LargeLeft imgSrc="/assets/WALKWAYS2.jpg" trans="160px"/>
 
-        <Milestone year="2045 - Stage 6" title="Bath House / Sea Baths"/>
+        <Milestone year="2080 - Stage 6" title="Bath House / Sea Baths"/>
         <TwoCol imgsOne={["/assets/stage6.png"]} imgsTwo={['/assets/foot.png']} trans="-100px"/>
         <MedRight imgSrc="/assets/casting.jpg" inset={true}/>
 
