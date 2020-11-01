@@ -2,7 +2,7 @@ import './styles/App.scss';
 
 import Header from './components/header';
 import LargeLeft from './components/largeLeft';
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
 import MedLeft from './components/medLeft';
 import Milestone from './components/milestone';
 import SiteSketch from './components/siteSketch';

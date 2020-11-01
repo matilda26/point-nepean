@@ -18,6 +18,10 @@
   h1 {
     width: 80%;
   }
+
+  .cameron {
+    cursor: pointer;
+  }
 }
 
 .timeline {
@@ -218,6 +222,10 @@
   left: 0;
   z-index: 1000;
   color: $black;
+
+  &__cross {
+    cursor: pointer;
+  }
 
   &--open {
     display: block;

@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <>
             <header className="header">
-                <h2 onClick={showModal} className="header__link">Cameron Gordon</h2>
+                <h2 onClick={showModal} className="header__link cameron">Cameron Gordon</h2>
                 <h2 className="header__link">Major Project</h2>
             </header>
             <Modal modalState={modalState} closeModal={hideModal}/>

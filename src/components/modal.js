@@ -6,7 +6,7 @@ const Modal = ({modalState, closeModal}) => {
                 <h2>Hi, I'm Cameron</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <form>
+            <form name="contact" netlify>
                 <label for="name">Name</label>
                 <input type="text" name="name" />
                 <label for="email">Email</label>
