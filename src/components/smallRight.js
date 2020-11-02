@@ -1,9 +1,9 @@
-const SmallRight = ({imgSrc, caption, inset, trans, images}) => {
+const SmallRight = ({imgSrc, caption, inset, trans, images, customClass}) => {
     return (
-        <div className="grid" data-scroll-section style={{marginTop: trans }}>
+        <div className={`grid ${customClass}`} style={{marginTop: trans }}>
             <div className={`small-right${inset ? '--inset' : ''}`}>
                 {images && images.length && images.map((item) => (
-                    <img src={item} data-scroll data-scroll-speed="-1"/>
+                    <img loading="lazy" src={item}/>
                 ))}
                 {caption && <p>{caption}</p>}
             </div>

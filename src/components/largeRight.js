@@ -1,8 +1,8 @@
 const LargeRight = ({imgSrc, caption, trans}) => {
     return (
-        <div className="grid" data-scroll-section style={{marginTop: trans }}>
+        <div className="grid"  style={{marginTop: trans }}>
             <div className="large-right">
-                <img src={imgSrc} data-scroll/>
+                <img loading="lazy" src={imgSrc} />
                 {caption && <p>{caption}</p>}
             </div>
         </div>

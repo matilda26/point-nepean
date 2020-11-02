@@ -1,8 +1,10 @@
-const MedRight = ({imgSrc, caption, inset, trans, large}) => {
+const MedRight = ({imgSrc, caption, inset, trans, large, video}) => {
     return (
-        <div className="grid" data-scroll-section style={{marginTop: trans }}>
+        <div className="grid" style={{marginTop: trans }}>
             <div className={`med-right${inset ? '--inset' : ''}`}>
-                <img src={imgSrc} data-scroll/>
+                {!!video ? (<video src={imgSrc} playsInline autoPlay muted loop />) : (
+                    <img loading="lazy" src={imgSrc}/>
+                )}
                 {caption && <p>{caption}</p>}
             </div>
         </div>
