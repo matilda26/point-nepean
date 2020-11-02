@@ -1,11 +1,13 @@
-const SmallLeft = ({imgSrc, caption, inset, trans, images}) => {
+const SmallLeft = ({imgSrc, captions, inset, trans, images}) => {
     return (
-        <div className="grid"  style={{marginTop: trans }}>
+        <div className="grid" style={{marginTop: trans }}>
             <div className={`small-left${inset ? '--inset' : ''}`}>
-                {images && images.length && images.map((item) => (
+                {images && images.length && images.map((item, index) => (
+                    <>
                     <img loading="lazy" src={item}/>
+                    {captions && captions.length && <p>{captions[index]}</p>}
+                    </>
                 ))}
-                {caption && <p>{caption}</p>}
             </div>
         </div>
     )

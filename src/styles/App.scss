@@ -14,6 +14,11 @@
   &__link {
     font-size: $sp-sm;
     cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $yellow;
+    }
   }
 
   h1 {
@@ -119,7 +124,7 @@
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 4px;
   }
 }
@@ -308,6 +313,9 @@
     border-bottom: 1px solid white;
     background-color: transparent;
     margin-bottom: 2.4rem;
+    color: $yellow;
+    font-size: 1.6rem;
+    font-family: "Inter", sans-serif;
   }
 
   button {
@@ -379,5 +387,40 @@
 
   video {
     margin-bottom: $sp-xl;
+  }
+}
+
+.mobile-cover {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $sp-sm;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparentize($color: #fff, $amount: 0.2);
+  box-sizing: border-box;
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+    color: $yellow;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 32px; 
+    color: $yellow;
+  }
+
+  @include md {
+    display: none;
   }
 }

@@ -8,6 +8,11 @@ const Header = () => {
     const [contactState, setContactState] = useState(false)
     const targetElement = useRef()
 
+    // form fields
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
     useEffect(() => {
         return function cleanup() {
             clearAllBodyScrollLocks()
@@ -54,11 +59,11 @@ const Header = () => {
             </div>
             <form name="contact" netlify>
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" required/>
+                <input type="text" name="name" required value={name} onChange={(event) => setName(event.target.value)}/>
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" required/>
+                <input type="email" name="email" required value={email} onChange={(event) => setEmail(event.target.value)}/>
                 <label htmlFor="message">Message</label>
-                <textarea type="text" name="message" required/>
+                <textarea type="text" name="message" required value={message} onChange={(event) => setMessage(event.target.value)}/>
                 <button type="submit">Send</button>
             </form>
         </div>

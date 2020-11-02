@@ -19,6 +19,7 @@ $screen-xl-min: 1440px;
 $olive: #51593E;
 $black: #000;
 $white: #fff;
+$yellow: #fabc3c;
 
 @mixin xs {
     @media (min-width: #{$screen-xs-min}) {
