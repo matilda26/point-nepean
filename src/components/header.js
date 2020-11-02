@@ -35,9 +35,14 @@ const Header = () => {
     } 
 
     const aboutContent = (
-        <>
-           
-        </>
+        <div className="modal__about">
+            <div className="modal__about--left">
+                <p>RMIT Architecture & Urban Design Major Project, semester 2, 2020. ‘The Artefact of Point Nepean’, by Cameron Gordon, under the supervision of Dr. Peter Brew.<br></br><br></br>The National Heritage Listing of Point Nepean Defence and Quarantine Precinct requires ‘[the] owner not allow [the] registered place or object fall into disrepair or fail to maintain it to the extent that its conservation is threatened’. With this as a condition the site was transferred from the Commonwealth to the State in 2009 and since then there has been a stream of proposals to find a commercial use. The need for the site to ‘pay it’s way’ tethers success and value in a way that justifies neglect, which raises issues as to the concept of National Significance and the notion of duty and obligation.</p>
+            </div>
+            <div className="modal__about--right">
+                <p>At any moment the two compulsions - obligation to maintain the fabric and the requirement for ‘economic sustainability’ - constitute the project, however the site is in a state of continual change, and ultimately the project is seen not individually but as a drama. A baroque tragedy, where events or moments are the precondition and possibility for what is waiting. The act of preservation and addressing climate change becomes the instrument by which we acknowledge the cost of neglecting the environment as well as offering the chance to recognise and conceptualise our time in time.<br></br><br></br>The project considers the Point Nepean Defence and Quarantine Precinct (Mon Mon), but such a concept could also be applicable to the Alpine National Park, the Grampians National Park (Gariwerd) or Wilsons Promontory (‘Yiruk’ or ‘Wamoon’).</p>
+            </div>
+        </div>
     )
 
     const contactContent = (

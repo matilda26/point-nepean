@@ -267,6 +267,32 @@
     }
   }
 
+  &__about {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: $sp-sm; 
+    margin-top: 50%;
+    transform: translateY(-50%);
+
+    @include md {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $sp-lg; 
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    &--left {
+      grid-column: 2 / span 5;
+    }
+    &--right {
+      grid-column: 7 / span 5;
+    }
+  }
+
   form {
     grid-column: 7 / span 5;
     display: flex;
