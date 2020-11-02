@@ -166,6 +166,11 @@
   grid-column: 1 / span 2;
   width: 100%;
   z-index: 60;
+
+  img + img {
+    margin-top: $sp-sm;
+  }
+
   @include md {
     grid-column: 3 / span 3;
   }
@@ -424,3 +429,4 @@
     display: none;
   }
 }
+
