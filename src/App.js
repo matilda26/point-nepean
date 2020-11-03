@@ -123,10 +123,10 @@ function App() {
         <Milestone year="2100+" title="The Future"/>
         <TextBlock content="At any moment the two compulsions - obligation to maintain the fabric and the requirement for ‘economic sustainability’ - constitute the project, however the site is in a state of continual change, and ultimately the project is seen not individually but as a drama." />
         <LargeLeft imgSrc="/assets/mood-02.mp4" video={true}/>
-        <TextBlock content="A baroque tragedy, where events or moments are the precondition and possibility for the future. The act of preservation and addressing climate change becomes the instrument by which we acknowledge the cost of neglecting the environment as well as offering the chance to recognise and conceptualise our time in time." align='right'/>
+        <TextBlock content="A baroque tragedy, where events or moments are the precondition and possibility for the future. The act of preservation and addressing climate change becomes the instrument by which we acknowledge the cost of neglecting the environment as well as offering the chance to recognise and conceptualise our time in time." contentTwo="The project considers the Point Nepean Defence and Quarantine Precinct (Mon Mon), but such a concept could also be applicable to the Alpine National Park, the Grampians National Park (Gariwerd) or Wilsons Promontory (‘Yiruk’ or ‘Wamoon’)." align='right-double'/>
 
         <Milestone year="Special Thanks"/>
-        <TextBlock content="With special thanks to my supervisor Dr. Peter Brew for his patience and collaboration.<br/><br/>Extra special thanks to Matilda, Jacqueline and Fysh Rutherford for their unwavering support. I couldn’t have done this without you.<br/><br/>Last but not least, Joel Hiller for providing university discussion during this lockdown semester and Clive Smith at the <a href='https://ncgvic.org.au/' target='_blank'>Nepean Historical Society</a> for his research assistance."/>
+        <TextBlock content="With special thanks to my supervisor Dr. Peter Brew for his patience and collaboration.<br/><br/>Extra special thanks to Matilda, Jacqueline and Fysh Rutherford for their unwavering support. I couldn’t have done this without you." contentTwo="Last but not least, Joel Hiller for providing university discussion during this lockdown semester and Clive Smith at the <a href='https://ncgvic.org.au/' target='_blank'>Nepean Historical Society</a> for his research assistance." align="left-double"/>
 
 
       </div>
