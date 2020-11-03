@@ -38,7 +38,30 @@ const Header = () => {
         setContactState(false)
         enableBodyScroll(targetElement);
     } 
+    
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
 
+    const handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", name, email, message })
+        })
+          .then(() => {
+              alert("Success!")
+              setName('')
+              setEmail('')
+              setMessage('')
+            })
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
+  
     const aboutContent = (
         <div className="modal__about">
             <div className="modal__about--left">
@@ -57,7 +80,8 @@ const Header = () => {
                 <p>The work presented here is from my Major Project, RMIT Architecture & Urban Design.</p>
                 <p>Contact me here.</p>
             </div>
-            <form name="contact" netlify>
+            <form name="contact" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" required value={name} onChange={(event) => setName(event.target.value)}/>
                 <label htmlFor="email">Email</label>
