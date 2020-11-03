@@ -126,7 +126,7 @@ function App() {
         <TextBlock content="A baroque tragedy, where events or moments are the precondition and possibility for the future. The act of preservation and addressing climate change becomes the instrument by which we acknowledge the cost of neglecting the environment as well as offering the chance to recognise and conceptualise our time in time." contentTwo="The project considers the Point Nepean Defence and Quarantine Precinct (Mon Mon), but such a concept could also be applicable to the Alpine National Park, the Grampians National Park (Gariwerd) or Wilsons Promontory (‘Yiruk’ or ‘Wamoon’)." align='right-double'/>
 
         <Milestone year="Special Thanks"/>
-        <TextBlock content="With special thanks to my supervisor Dr. Peter Brew for his patience and collaboration.<br/><br/>Extra special thanks to Matilda, Jacqueline and Fysh Rutherford for their unwavering support. I couldn’t have done this without you." contentTwo="Last but not least, Joel Hiller for providing university discussion during this lockdown semester and Clive Smith at the <a href='https://ncgvic.org.au/' target='_blank'>Nepean Historical Society</a> for his research assistance." align="left-double"/>
+        <TextBlock content="With special thanks to my supervisor Dr. Peter Brew for his patience and collaboration.<br/><br/>Extra special thanks to my friends and family for their unwavering support. I couldn’t have done this without you." contentTwo="Last but not least, Joel Hiller for providing university discussion during this lockdown semester and Clive Smith at the <a href='https://ncgvic.org.au/' target='_blank'>Nepean Historical Society</a> for his research assistance." align="left-double"/>
 
 
       </div>
