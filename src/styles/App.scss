@@ -430,3 +430,51 @@
   }
 }
 
+.text-block {
+  p {
+    grid-column: 1 / span 5;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include md {
+      grid-column: 2 / span 4;
+    }
+
+    z-index: 10000;
+
+    a {
+      color: $yellow;
+      text-decoration: none;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  
+
+  &--right {
+    p {
+      @include md {
+        grid-column: 8 / span 4;
+      }
+    }
+  }
+
+  &--right-inset {
+    p {
+      @include md {
+        grid-column: 6 / span 4;
+      }
+    }
+  }
+
+  &--left-inset {
+    p {
+      @include md {
+        grid-column: 4 / span 4;
+      }
+    }
+  }
+}
